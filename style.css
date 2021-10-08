@@ -1,0 +1,150 @@
+/* Import Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Target all HTML elements */
+* {
+    /* Remove all margins, paddings, set box sizing to border and obtain font from parent element */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+body {
+    /* Set default values */
+    font-size: 20px;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    color: #fefefe;
+    line-height: 1.1;
+    font-weight: bold;
+    padding: 80px 40px;
+    background-color: #181818;
+}
+
+img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+a {
+    color: orange;
+    /* Let content wrap in case it is bigger than screen size */
+    word-wrap: break-word;
+}
+
+p {
+    margin-bottom: 32px;
+}
+
+/* Target multiple elements */
+main,
+section,
+footer {
+    padding-top: 80px;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Use classes to target elements */
+.text-center {
+    text-align: center;
+}
+
+/* White frame surrounding webpage */
+.frame {
+    /* Position frame relative to the window of the browser */
+    position: fixed;
+    /* Make frame clickable through */
+    pointer-events: none;
+    /* Position at top left */
+    top: 0;
+    left: 0;
+    /* Set width and height to the window width and height, so it covers all window */
+    height: 100vh;
+    width: 100vw;
+    border: 20px solid #fefefe;
+}
+
+.container {
+    padding-left: 46px;
+    padding-right: 46px;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* Navbar flexbox */
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+/* Navbar item */
+.navbar a {
+    /* Inherit font color from parent ( white ) */
+    color: inherit;
+    text-decoration: none;
+    padding: 12px 22px;
+    font-weight: bold;
+    border-right: 4px solid orange;
+}
+
+/* Remove right border from last Navbar item */
+.navbar a:last-of-type {
+    border-right: none;
+}
+
+/* Set color to orange if item has "active" class */
+.navbar a.active {
+    color: orange;
+}
+
+.intro {
+    padding-bottom: 40px;
+}
+
+.content {
+    padding-top: 60px;
+    font-size: 64px;
+    line-height: 1.3;
+}
+
+/* Project Flexbox */
+.project {
+    display: flex;
+    width: 100%;
+    padding: 40px 0;
+    font-size: 52px;
+    border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
+    margin-top: 84px;
+}
+
+/* Project flexbox first column */
+.project .project-image {
+    width: 33%;
+    margin-right: 40px;
+}
+
+/* Project flexbox second column */
+.project .project-text {
+    flex: 1;
+    line-height: 1;
+}
+
+/* Project title */
+.project .project-text h2 {
+    margin-bottom: 40px;
+    color: orange;
+}
